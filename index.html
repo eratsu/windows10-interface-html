@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="window">
+        <div class="top">
+            <div class="icons"></div>
+            <div class="name">File Explorer</div>
+            <div class="btn">
+                <ul>
+                    <li><button class="minimize-btn">_</button></li>
+                    <li><button class="maximize-btn">O</button> </li>
+                    <li><button class="close-btn">X</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu-top">
+            <ul>
+                <li><a href="#" class="active">File</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Share</a></li>
+                <li><a href="#">View</a></li>
+            </ul>
+        </div>
+        <div class="url-bar">
+            <div></div>
+            <div><input type="text"></div>
+            <div><input type="text"></div>
+        </div>
+        <div class="container">
+            <div class="treeview">
+                <ul>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                    <li>teste</li>
+                </ul>
+            </div>
+            <div class="content">b</div>
+        </div>
+    </div>
+
+
+
+        <div id="toolbar">
+                <div id="winbtn">
+                    <ul>
+                        <li><img src="imgs/winlogo-white.png" width="24px" alt=""></li>
+                    </ul>
+                </div>
+                <div id="items">
+                    <ul>
+                        <li><img src="imgs/explorerico.png" width="24px" alt=""></li>
+                        <li><img src="imgs/winlogo-white.png" width="24px" alt=""></li>
+                        <li><img src="imgs/winlogo-white.png" width="24px" alt=""></li>
+                        <li><img src="imgs/winlogo-white.png" width="24px" alt=""></li>
+                    </ul>
+                </div>
+                <div id="tray"></div>
+            </div>
+        
+
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script>
+    <script src="script.js"></script>
+    <script>
+    $( function() {
+      $( ".window" ).draggable({ handle: ".top" });
+      $( ".window" ).resizable();
+      $( "#items ul" ).sortable({ axis: "x" });
+      $( "body" ).selectable();
+
+    } );
+    </script>
+
+
+
+    <script>
+        $( function() {
+            $( ".maximize-btn" ).click(function() {
+                $( ".window" ).toggleClass( "maximized");
+            });
+        } );
+    </script>
+
+
+<script>
+$(function() {
+        // $.contextMenu({
+        //     selector: 'body', 
+        //     callback: function(key, options) {
+        //         var m = "clicked: " + key;
+        //         window.console && console.log(m) || alert(m); 
+        //     },
+        //     items: {
+        //         "edit": {name: "Edit", icon: "edit"},
+        //         "cut": {name: "Cut", icon: "cut"},
+        //        copy: {name: "Copy", icon: "copy"},
+        //         "paste": {name: "Paste", icon: "paste"},
+        //         "delete": {name: "Delete", icon: "delete"},
+        //         "sep1": "---------",
+        //         "quit": {name: "Quit", icon: function(){
+        //             return 'context-menu-icon context-menu-icon-quit';
+        //         }}
+        //     }
+        // });
+
+        // $('body').on('click', function(e){
+        //     console.log('clicked', this);
+        // })    
+    });
+
+</script>
+    
+</body>
+</html>
